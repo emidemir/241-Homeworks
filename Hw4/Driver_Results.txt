@@ -1,0 +1,963 @@
+1)_____Printing a set with cout (ostream object) is working, no leak is here___
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+2)_____Adding a DOY object into a set, no leak is here___
+Set1's first state
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Set1's state after adding an object
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+3)___Checking if operator== and operator != works, no leaks here___
+Using == opeartor
+Comparing set1 with set1 (same set)
+1
+Comparing set1 with set2 (different set)
+0
+Using != opeartor
+Comparing set1 with set1 (same set)
+0
+Comparing set1 with set2 (different set)
+1
+4)___Remove member function removes the element you specify from set, no leaks here___
+Set1's first state
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Set1's second state after removing an object
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+If user try to remove an object that is not in the set, function is gonna stop since it returns void
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+5)___Size function returns the size of set ,no leaks here___
+Size of set1 is 3and size of set2 is 7
+6)___Operator+ adds an element to set,no leaks here___
+First state of set1 is 
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+
+Second state of set1 after adding obj2 
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+
+7)___Operator+ returns a union set,no leaks here___
+First state of set1 and set2 are
+set1
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+set2
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+After merging two set with +operator, set3 is
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+Day: 1Month: 1
+
+Day: 1Month: 1
+
+Day: 1Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+Operator also does not allow any duplication on set. We can say that because first 3 element of set2 is same with set1 but there are only 4 elements on set3
+8)___Operator- returns the difference set,no leaks here___
+First state of set1 and set2 are
+set1
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+Day: 1Month: 1
+
+Day: 1Month: 1
+
+Day: 1Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+set2
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+After getting difference of two set with -operator, set4 is
+-----
+-----
+If the left set is subset of right set, the difference will make nothing and we will see only empty set. For example set1 is subset of set2 and set1-set2 will result empty set
+The set4 is
+-----
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+Day: 1Month: 1
+
+-----
+9)___Operator- removes an element from set ,no leaks here___
+First state of set2 is 
+-----
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+-----
+After removing object 4th September(9) from set2
+-----
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+-----
+10)___Operator^ gets the intersection set ,no leaks here___
+First state of set1 and set2 are
+set1
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 5Month: 4
+
+Day: 12Month: 12
+
+Day: 1Month: 1
+
+Day: 1Month: 1
+
+Day: 1Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 4Month: 9
+
+set2
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+set5 after getting the intersection of both set is
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 1Month: 1
+
+Day: 1Month: 1
+
+Day: 1Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Day: 1Month: 1
+
+Day: 1Month: 1
+
+11)___Operator! gets the complement set ,no leaks here___
+set2's current state is 
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Complement set is 
+Day: 1Month: 1
+
+Day: 2Month: 1
+
+Day: 3Month: 1
+
+Day: 4Month: 1
+
+Day: 5Month: 1
+
+Day: 6Month: 1
+
+Day: 7Month: 1
+
+Day: 8Month: 1
+
+Day: 9Month: 1
+
+Day: 10Month: 1
+
+Day: 11Month: 1
+
+Day: 12Month: 1
+
+Day: 13Month: 1
+
+Day: 14Month: 1
+
+Day: 15Month: 1
+
+Day: 16Month: 1
+
+Day: 17Month: 1
+
+Day: 18Month: 1
+
+Day: 19Month: 1
+
+Day: 20Month: 1
+
+Day: 21Month: 1
+
+Day: 22Month: 1
+
+Day: 23Month: 1
+
+Day: 24Month: 1
+
+Day: 25Month: 1
+
+Day: 26Month: 1
+
+Day: 27Month: 1
+
+Day: 28Month: 1
+
+Day: 1Month: 2
+
+Day: 2Month: 2
+
+Day: 3Month: 2
+
+Day: 4Month: 2
+
+Day: 5Month: 2
+
+Day: 6Month: 2
+
+Day: 7Month: 2
+
+Day: 8Month: 2
+
+Day: 9Month: 2
+
+Day: 10Month: 2
+
+Day: 11Month: 2
+
+Day: 12Month: 2
+
+Day: 13Month: 2
+
+Day: 14Month: 2
+
+Day: 15Month: 2
+
+Day: 16Month: 2
+
+Day: 17Month: 2
+
+Day: 18Month: 2
+
+Day: 19Month: 2
+
+Day: 20Month: 2
+
+Day: 21Month: 2
+
+Day: 22Month: 2
+
+Day: 23Month: 2
+
+Day: 24Month: 2
+
+Day: 25Month: 2
+
+Day: 26Month: 2
+
+Day: 27Month: 2
+
+Day: 28Month: 2
+
+Day: 29Month: 2
+
+Day: 30Month: 2
+
+Day: 31Month: 2
+
+Day: 1Month: 3
+
+Day: 2Month: 3
+
+Day: 3Month: 3
+
+Day: 4Month: 3
+
+Day: 5Month: 3
+
+Day: 6Month: 3
+
+Day: 7Month: 3
+
+Day: 8Month: 3
+
+Day: 9Month: 3
+
+Day: 10Month: 3
+
+Day: 11Month: 3
+
+Day: 12Month: 3
+
+Day: 13Month: 3
+
+Day: 14Month: 3
+
+Day: 15Month: 3
+
+Day: 16Month: 3
+
+Day: 17Month: 3
+
+Day: 18Month: 3
+
+Day: 19Month: 3
+
+Day: 20Month: 3
+
+Day: 21Month: 3
+
+Day: 22Month: 3
+
+Day: 23Month: 3
+
+Day: 24Month: 3
+
+Day: 25Month: 3
+
+Day: 26Month: 3
+
+Day: 27Month: 3
+
+Day: 28Month: 3
+
+Day: 29Month: 3
+
+Day: 30Month: 3
+
+Day: 1Month: 4
+
+Day: 2Month: 4
+
+Day: 3Month: 4
+
+Day: 4Month: 4
+
+Day: 5Month: 4
+
+Day: 6Month: 4
+
+Day: 7Month: 4
+
+Day: 8Month: 4
+
+Day: 9Month: 4
+
+Day: 10Month: 4
+
+Day: 11Month: 4
+
+Day: 12Month: 4
+
+Day: 13Month: 4
+
+Day: 14Month: 4
+
+Day: 15Month: 4
+
+Day: 16Month: 4
+
+Day: 17Month: 4
+
+Day: 18Month: 4
+
+Day: 19Month: 4
+
+Day: 20Month: 4
+
+Day: 21Month: 4
+
+Day: 22Month: 4
+
+Day: 23Month: 4
+
+Day: 24Month: 4
+
+Day: 25Month: 4
+
+Day: 26Month: 4
+
+Day: 27Month: 4
+
+Day: 28Month: 4
+
+Day: 29Month: 4
+
+Day: 30Month: 4
+
+Day: 31Month: 4
+
+Day: 1Month: 5
+
+Day: 2Month: 5
+
+Day: 3Month: 5
+
+Day: 4Month: 5
+
+Day: 5Month: 5
+
+Day: 6Month: 5
+
+Day: 7Month: 5
+
+Day: 8Month: 5
+
+Day: 9Month: 5
+
+Day: 10Month: 5
+
+Day: 11Month: 5
+
+Day: 12Month: 5
+
+Day: 13Month: 5
+
+Day: 14Month: 5
+
+Day: 15Month: 5
+
+Day: 16Month: 5
+
+Day: 17Month: 5
+
+Day: 18Month: 5
+
+Day: 19Month: 5
+
+Day: 20Month: 5
+
+Day: 21Month: 5
+
+Day: 22Month: 5
+
+Day: 23Month: 5
+
+Day: 24Month: 5
+
+Day: 25Month: 5
+
+Day: 26Month: 5
+
+Day: 27Month: 5
+
+Day: 28Month: 5
+
+Day: 29Month: 5
+
+Day: 30Month: 5
+
+Day: 5Month: 6
+
+Day: 6Month: 6
+
+Day: 7Month: 6
+
+Day: 8Month: 6
+
+Day: 9Month: 6
+
+Day: 10Month: 6
+
+Day: 11Month: 6
+
+Day: 12Month: 6
+
+Day: 13Month: 6
+
+Day: 14Month: 6
+
+Day: 15Month: 6
+
+Day: 16Month: 6
+
+Day: 17Month: 6
+
+Day: 18Month: 6
+
+Day: 19Month: 6
+
+Day: 20Month: 6
+
+Day: 21Month: 6
+
+Day: 22Month: 6
+
+Day: 23Month: 6
+
+Day: 24Month: 6
+
+Day: 25Month: 6
+
+Day: 26Month: 6
+
+Day: 27Month: 6
+
+Day: 28Month: 6
+
+Day: 29Month: 6
+
+Day: 30Month: 6
+
+Day: 31Month: 6
+
+Day: 1Month: 7
+
+Day: 2Month: 7
+
+Day: 3Month: 7
+
+Day: 5Month: 7
+
+Day: 6Month: 7
+
+Day: 7Month: 7
+
+Day: 8Month: 7
+
+Day: 9Month: 7
+
+Day: 10Month: 7
+
+Day: 11Month: 7
+
+Day: 12Month: 7
+
+Day: 13Month: 7
+
+Day: 14Month: 7
+
+Day: 15Month: 7
+
+Day: 16Month: 7
+
+Day: 17Month: 7
+
+Day: 18Month: 7
+
+Day: 19Month: 7
+
+Day: 20Month: 7
+
+Day: 21Month: 7
+
+Day: 22Month: 7
+
+Day: 23Month: 7
+
+Day: 24Month: 7
+
+Day: 25Month: 7
+
+Day: 26Month: 7
+
+Day: 27Month: 7
+
+Day: 28Month: 7
+
+Day: 29Month: 7
+
+Day: 30Month: 7
+
+Day: 31Month: 7
+
+Day: 1Month: 8
+
+Day: 2Month: 8
+
+Day: 3Month: 8
+
+Day: 5Month: 8
+
+Day: 6Month: 8
+
+Day: 7Month: 8
+
+Day: 8Month: 8
+
+Day: 9Month: 8
+
+Day: 10Month: 8
+
+Day: 11Month: 8
+
+Day: 12Month: 8
+
+Day: 13Month: 8
+
+Day: 14Month: 8
+
+Day: 15Month: 8
+
+Day: 16Month: 8
+
+Day: 17Month: 8
+
+Day: 18Month: 8
+
+Day: 19Month: 8
+
+Day: 20Month: 8
+
+Day: 21Month: 8
+
+Day: 22Month: 8
+
+Day: 23Month: 8
+
+Day: 24Month: 8
+
+Day: 25Month: 8
+
+Day: 26Month: 8
+
+Day: 27Month: 8
+
+Day: 28Month: 8
+
+Day: 29Month: 8
+
+Day: 30Month: 8
+
+Day: 1Month: 9
+
+Day: 2Month: 9
+
+Day: 3Month: 9
+
+Day: 4Month: 9
+
+Day: 5Month: 9
+
+Day: 6Month: 9
+
+Day: 7Month: 9
+
+Day: 8Month: 9
+
+Day: 9Month: 9
+
+Day: 10Month: 9
+
+Day: 11Month: 9
+
+Day: 12Month: 9
+
+Day: 13Month: 9
+
+Day: 14Month: 9
+
+Day: 15Month: 9
+
+Day: 16Month: 9
+
+Day: 17Month: 9
+
+Day: 18Month: 9
+
+Day: 19Month: 9
+
+Day: 20Month: 9
+
+Day: 21Month: 9
+
+Day: 22Month: 9
+
+Day: 23Month: 9
+
+Day: 24Month: 9
+
+Day: 25Month: 9
+
+Day: 26Month: 9
+
+Day: 27Month: 9
+
+Day: 28Month: 9
+
+Day: 29Month: 9
+
+Day: 30Month: 9
+
+Day: 31Month: 9
+
+Day: 1Month: 10
+
+Day: 2Month: 10
+
+Day: 3Month: 10
+
+Day: 4Month: 10
+
+Day: 5Month: 10
+
+Day: 6Month: 10
+
+Day: 7Month: 10
+
+Day: 8Month: 10
+
+Day: 9Month: 10
+
+Day: 10Month: 10
+
+Day: 11Month: 10
+
+Day: 12Month: 10
+
+Day: 13Month: 10
+
+Day: 14Month: 10
+
+Day: 15Month: 10
+
+Day: 16Month: 10
+
+Day: 17Month: 10
+
+Day: 18Month: 10
+
+Day: 19Month: 10
+
+Day: 20Month: 10
+
+Day: 21Month: 10
+
+Day: 22Month: 10
+
+Day: 23Month: 10
+
+Day: 24Month: 10
+
+Day: 25Month: 10
+
+Day: 26Month: 10
+
+Day: 27Month: 10
+
+Day: 28Month: 10
+
+Day: 29Month: 10
+
+Day: 30Month: 10
+
+Day: 1Month: 11
+
+Day: 2Month: 11
+
+Day: 3Month: 11
+
+Day: 4Month: 11
+
+Day: 5Month: 11
+
+Day: 6Month: 11
+
+Day: 7Month: 11
+
+Day: 8Month: 11
+
+Day: 9Month: 11
+
+Day: 10Month: 11
+
+Day: 11Month: 11
+
+Day: 12Month: 11
+
+Day: 13Month: 11
+
+Day: 14Month: 11
+
+Day: 15Month: 11
+
+Day: 16Month: 11
+
+Day: 17Month: 11
+
+Day: 18Month: 11
+
+Day: 19Month: 11
+
+Day: 20Month: 11
+
+Day: 21Month: 11
+
+Day: 22Month: 11
+
+Day: 23Month: 11
+
+Day: 24Month: 11
+
+Day: 25Month: 11
+
+Day: 26Month: 11
+
+Day: 27Month: 11
+
+Day: 28Month: 11
+
+Day: 29Month: 11
+
+Day: 30Month: 11
+
+Day: 31Month: 11
+
+12)___Operator[] returns the value at given index ,no leaks here___
+set2's current state is 
+Day: 1Month: 6
+
+Day: 2Month: 6
+
+Day: 3Month: 6
+
+Day: 4Month: 6
+
+Day: 4Month: 7
+
+Day: 4Month: 8
+
+Value at index 0 and 1 is 
+Day: 1Month: 6
+Day: 2Month: 6
